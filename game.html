@@ -19,7 +19,17 @@
     <p class="result margin-30"></p>
    
 
-    <button onclick="resetScore()" class="reset__btn margin-30">Reset</button>
+    <button onclick="    
+    score.wins = 0,
+    score.losses = 0,
+    score.ties = 0
+
+    localStorage.setItem('score', JSON.stringify(score))
+
+    document.querySelector('.result')
+        .innerHTML = `wins: ${score.wins} | losses: ${score.losses} | ties: ${score.wins}`"
+        
+        class="reset__btn margin-30">Reset</button>
     <script src="./game.js">
 
     </script>
